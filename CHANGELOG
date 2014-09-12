@@ -1,0 +1,3 @@
+2014-09-12 Release 0.1.0
+- Initial release with base functionality
+- Manages /etc/yum.repos.d/ubelix.repo and respective GPG-Key

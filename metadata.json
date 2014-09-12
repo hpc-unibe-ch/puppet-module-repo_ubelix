@@ -1,0 +1,19 @@
+{
+  "name": "ubelix-ubelixrepo",
+  "version": "0.1.0",
+  "source": "https://idstash.unibe.ch/scm/ubelix/ubelix-ubelixrepo.git",
+  "author": "Rolli, Michael <michael.rolli@id.unibe.ch>",
+  "license": "CC BY-SA 4.0",
+  "summary": "Repository setup for UBELIX yum repository.",
+  "description": "Repository setup for UBELIX yum repository.",
+  "project_page": "https://idstash.unibe.ch/projects/UBELIX/repos/ubelix-ubelixrepo/browse",
+  "operatingsystem_support": [
+    {
+    "operatingsystem":"RedHat",
+    "operatingsystemrelease":[ "6.0" ]
+    }
+   ],
+  "dependencies": [
+
+  ]
+}

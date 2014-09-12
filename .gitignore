@@ -1,0 +1,9 @@
+.*.sw?
+.bundle
+.project
+.rspec_system
+.ruby-version
+.vagrant
+Gemfile.lock
+pkg
+spec/fixtures
