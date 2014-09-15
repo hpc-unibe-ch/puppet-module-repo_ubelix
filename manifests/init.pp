@@ -53,7 +53,7 @@ class ubelixrepo (
       enabled        => $ubelixrepo_enabled,
       gpgcheck       => $ubelixrepo_gpgcheck,
       gpgkey         => "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-UBELIX-${::operatingsystemmajrelease}",
-      descr          => "UBELIX specific packages for for Enterprise Linux ${::operatingsystemmajrelease} - \$basearch",
+      descr          => "UBELIX specific packages for Enterprise Linux ${::operatingsystemmajrelease} - \$basearch",
     }
 
     file { "/etc/pki/rpm-gpg/RPM-GPG-KEY-UBELIX-${::operatingsystemmajrelease}":
