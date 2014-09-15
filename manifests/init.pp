@@ -61,10 +61,10 @@ class ubelixrepo (
       owner  => 'root',
       group  => 'root',
       mode   => '0644',
-      source => "puppet:///modules/rpmrepo/RPM-GPG-KEY-UBELIX-${::operatingsystemmajrelease}",
+      source => "puppet:///modules/ubelixrepo/RPM-GPG-KEY-UBELIX-${::operatingsystemmajrelease}",
     }
 
-    rpmrepo::rpm_gpg_key{ "UBELIX-${::operatingsystemmajrelease}":
+    ubelixrepo::rpm_gpg_key{ "UBELIX-${::operatingsystemmajrelease}":
       path   => "/etc/pki/rpm-gpg/RPM-GPG-KEY-UBELIX-${::operatingsystemmajrelease}",
       before => Yumrepo['ubelix'],
     }
