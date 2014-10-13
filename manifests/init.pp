@@ -36,22 +36,22 @@
 #  }
 #
 class ubelixrepo (
-  $ubelixrepo_mirrorlist     = 'absent',
-  $ubelixrepo_baseurl        = "http://gridadmin.ubelix.unibe.ch/mirror/ubelix/${::operatingsystemmajrelease}/\$basearch",
-  $ubelixrepo_failovermethod = 'absent',
-  $ubelixrepo_proxy          = 'absent',
-  $ubelixrepo_enabled        = 1,
-  $ubelixrepo_gpgcheck       = 1,
+  $mirrorlist     = 'absent',
+  $baseurl        = "http://gridadmin.ubelix.unibe.ch/mirror/ubelix/${::operatingsystemmajrelease}/\$basearch",
+  $failovermethod = 'absent',
+  $proxy          = 'absent',
+  $enabled        = 1,
+  $gpgcheck       = 1,
 ) {
 
   if $::osfamily == 'RedHat' and $::operatingsystem !~ /Fedora|Amazon/ {
     yumrepo { 'ubelix':
-      mirrorlist     => $ubelixrepo_mirrorlist,
-      baseurl        => $ubelixrepo_baseurl,
-      failovermethod => $ubelixrepo_failovermethod,
-      proxy          => $ubelixrepo_proxy,
-      enabled        => $ubelixrepo_enabled,
-      gpgcheck       => $ubelixrepo_gpgcheck,
+      mirrorlist     => $mirrorlist,
+      baseurl        => $baseurl,
+      failovermethod => $failovermethod,
+      proxy          => $proxy,
+      enabled        => $enabled,
+      gpgcheck       => $gpgcheck,
       gpgkey         => "file:///etc/pki/rpm-gpg/RPM-GPG-KEY-UBELIX-${::operatingsystemmajrelease}",
       descr          => "UBELIX specific packages for Enterprise Linux ${::operatingsystemmajrelease} - \$basearch",
     }
