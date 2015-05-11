@@ -1,0 +1,8 @@
+HOSTS:
+  centos-7-x64:
+    platform: el-7-x86_64
+    box : centos-7-x86_64-nocm
+    box_url: http://gridadmin01.mgmt.unibe.ch/boxes/centos-7-x86_64-virtualbox-nocm.box
+    hypervisor: vagrant
+CONFIG:
+  type: foss
