@@ -1,11 +1,1 @@
-HOSTS:
-  centos-65-x64:
-    roles:
-      - master
-    platform: el-6-x86_64
-    box : centos-6.5-x86_64
-    box_url : http://gridadmin.mgmt.unibe.ch/boxes/centos-6.5-x86_64.box
-    hypervisor : vagrant
-CONFIG:
-  log_level: verbose
-  type: foss
+centos-6-x86_64.yml

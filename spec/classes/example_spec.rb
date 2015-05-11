@@ -2,22 +2,25 @@ require 'spec_helper'
 
 describe 'ubelixrepo' do
   context 'supported operating systems' do
-    ['Debian', 'RedHat'].each do |osfamily|
-      describe "ubelixrepo class without any parameters on #{osfamily}" do
-        let(:params) {{ }}
-        let(:facts) {{
-          :osfamily => osfamily,
-        }}
+    on_supported_os.each do |os, facts|
+      context "on #{os}" do
+        let(:facts) do
+          facts
+        end
 
-        it { should compile.with_all_deps }
+        context "ubelixrepo class without any parameters on #{osfamily}" do
+          let(:params) {{ }}
 
-        it { should contain_class('ubelixrepo::params') }
-        it { should contain_class('ubelixrepo::install').that_comes_before('ubelixrepo::config') }
-        it { should contain_class('ubelixrepo::config') }
-        it { should contain_class('ubelixrepo::service').that_subscribes_to('ubelixrepo::config') }
+          it { is_expected.to compile.with_all_deps }
 
-        it { should contain_service('ubelixrepo') }
-        it { should contain_package('ubelixrepo').with_ensure('present') }
+          it { is_expected.to contain_class('ubelixrepo::params') }
+          it { is_expected.to contain_class('ubelixrepo::install').that_comes_before('ubelixrepo::config') }
+          it { is_expected.to contain_class('ubelixrepo::config') }
+          it { is_expected.to contain_class('ubelixrepo::service').that_subscribes_to('ubelixrepo::config') }
+
+          it { is_expected.to contain_service('ubelixrepo') }
+          it { is_expected.to contain_package('ubelixrepo').with_ensure('present') }
+        end
       end
     end
   end
@@ -29,7 +32,8 @@ describe 'ubelixrepo' do
         :operatingsystem => 'Nexenta',
       }}
 
-      it { expect { should contain_package('ubelixrepo') }.to raise_error(Puppet::Error, /Nexenta not supported/) }
+      it { expect { is_expected.to contain_package('ubelixrepo') }.to raise_error(Puppet::Error, /Nexenta not supported/) }
     end
   end
 end
+
