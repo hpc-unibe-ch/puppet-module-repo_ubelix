@@ -9,7 +9,7 @@
   "issues_url": "https://idjira.unibe.ch/projects/UXPM",
   "dependencies": [
     {
-      "name": "puppetlabs-stdlib",
+      "name": "puppetlabs/stdlib",
       "version_requirement": "4.x"
     }
   ],
