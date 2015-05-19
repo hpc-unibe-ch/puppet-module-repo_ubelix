@@ -1,6 +1,6 @@
 {
   "name": "ubelix-ubelixrepo",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": "Rolli, Michael (ID) <michael.rolli@id.unibe.ch>",
   "summary": "Repository setup for UBELIX yum repository.",
   "license": "CC BY-SA 4.0",
