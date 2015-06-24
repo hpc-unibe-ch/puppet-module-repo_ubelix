@@ -1,4 +1,4 @@
-# == Class: ubelixrepo
+# == Class: repo_ubelix
 #
 # This class configures the UBELIX repository and imports the GPG key.
 #
@@ -26,16 +26,16 @@
 #
 # To use the default values:
 #
-#  include ubelixrepo
+#  include repo_ubelix
 #
 # To  override some values:
 #
-#  class { 'ubelixrepo':
+#  class { 'repo_ubelix':
 #    baseurl => 'proxy.unibe.ch:80',
 #    enabled => 1,
 #  }
 #
-class ubelixrepo (
+class repo_ubelix (
   $mirrorlist     = 'absent',
   $baseurl        = "http://gridadmin.ubelix.unibe.ch/mirror/ubelix/${::operatingsystemmajrelease}/\$basearch",
   $failovermethod = 'absent',
@@ -61,10 +61,10 @@ class ubelixrepo (
       owner  => 'root',
       group  => 'root',
       mode   => '0644',
-      source => "puppet:///modules/ubelixrepo/RPM-GPG-KEY-UBELIX-${::operatingsystemmajrelease}",
+      source => "puppet:///modules/repo_ubelix/RPM-GPG-KEY-UBELIX-${::operatingsystemmajrelease}",
     }
 
-    ubelixrepo::rpm_gpg_key{ "UBELIX-${::operatingsystemmajrelease}":
+    repo_ubelix::rpm_gpg_key{ "UBELIX-${::operatingsystemmajrelease}":
       path   => "/etc/pki/rpm-gpg/RPM-GPG-KEY-UBELIX-${::operatingsystemmajrelease}",
       before => Yumrepo['ubelix'],
     }

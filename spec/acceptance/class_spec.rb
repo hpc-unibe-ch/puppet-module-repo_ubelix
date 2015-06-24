@@ -1,12 +1,12 @@
 require 'spec_helper_acceptance'
 
-describe 'ubelixrepo class' do
+describe 'repo_ubelix class' do
 
   context 'default parameters' do
     # Using puppet_apply as a helper
     it 'should work idempotently with no errors' do
       pp = <<-EOS
-      class { 'ubelixrepo': }
+      class { 'repo_ubelix': }
       EOS
 
       # Run it twice and test for idempotency
@@ -14,11 +14,11 @@ describe 'ubelixrepo class' do
       apply_manifest(pp, :catch_changes  => true)
     end
 
-    describe package('ubelixrepo') do
+    describe package('repo_ubelix') do
       it { is_expected.to be_installed }
     end
 
-    describe service('ubelixrepo') do
+    describe service('repo_ubelix') do
       it { is_expected.to be_enabled }
       it { is_expected.to be_running }
     end

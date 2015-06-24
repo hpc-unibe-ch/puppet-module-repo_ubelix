@@ -1,13 +1,13 @@
-# ubelixrepo
+# repo_ubelix
 
 #### Table of Contents
 
 1. [Overview](#overview)
 2. [Module Description - What the module does and why it is useful](#module-description)
-3. [Setup - The basics of getting started with ubelixrepo](#setup)
-    * [What ubelixrepo affects](#what-ubelixrepo-affects)
+3. [Setup - The basics of getting started with repo_ubelix](#setup)
+    * [What repo_ubelix affects](#what-repo_ubelix-affects)
     * [Setup requirements](#setup-requirements)
-    * [Beginning with ubelixrepo](#beginning-with-ubelixrepo)
+    * [Beginning with repo_ubelix](#beginning-with-repo_ubelix)
 4. [Usage - Configuration options and additional functionality](#usage)
 5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
 5. [Limitations - OS compatibility, etc.](#limitations)
@@ -27,7 +27,7 @@ If your module has a range of functionality (installation, configuration, manage
 
 ## Setup
 
-### What ubelixrepo affects
+### What repo_ubelix affects
 
 * A list of files, packages, services, or operations that the module will alter, impact, or execute on the system it's installed on.
 * This is a great place to stick any warnings.
@@ -37,7 +37,7 @@ If your module has a range of functionality (installation, configuration, manage
 
 If your module requires anything extra before setting up (pluginsync enabled, etc.), mention it here. 
 
-### Beginning with ubelixrepo
+### Beginning with repo_ubelix
 
 The very basic steps needed for a user to get the module up and running. 
 
@@ -59,12 +59,3 @@ This is where you list OS compatibility, version compatibility, etc.
 
 Since your module is awesome, other users will want to play with it. Let them know what the ground rules for contributing are.
 
-## Copyright Notice
-
-ubelixrepo (c) by IT Services Department, University of Bern
-
-ubelixrepo is licensed under a
-Creative Commons Attribution-ShareAlike 4.0 International License.
-
-You should have received a copy of the license along with this
-work. If not, see <http://creativecommons.org/licenses/by-sa/4.0/>. 
