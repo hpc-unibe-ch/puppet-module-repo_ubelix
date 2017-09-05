@@ -1,16 +1,16 @@
 {
   "name": "ubelix-repo_ubelix",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "author": "Rolli, Michael (ID) <michael.rolli@id.unibe.ch>",
-  "summary": "Repository setup for UBELIX yum repository.",
-  "license": "CC BY-SA 4.0",
+  "summary": "Repository setup for the UBELIX yum repository.",
+  "license": "Apache-2.0",
   "source": "https://idos-code.unibe.ch/projects/UBELIX/repos/ubelix-repo_ubelix/browse",
   "project_page": "https://idos-code.unibe.ch/projects/UBELIX/repos/ubelix-repo_ubelix/browse",
   "issues_url": "https://idos-issues.unibe.ch/projects/UXPM",
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
-      "version_requirement": "4.x"
+      "version_requirement": ">= 4.13.1 < 5.0.0"
     }
   ],
   "operatingsystem_support": [
@@ -28,5 +28,14 @@
         "7"
       ]
     }
-  ]
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.7.0 < 6.0.0"
+    }
+  ],
+  "pdk-version": "1.0.1",
+  "template-url": "file:///opt/puppetlabs/pdk/share/cache/pdk-module-template.git",
+  "template-ref": "heads/master-0-g5db7961"
 }
