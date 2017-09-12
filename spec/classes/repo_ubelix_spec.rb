@@ -5,7 +5,13 @@ describe 'repo_ubelix' do
     context "on #{os}" do
       let(:facts) { os_facts }
 
-      it { is_expected.to compile }
+      # Testing if class defaults are used.
+      context 'with class defaults' do
+        it { is_expected.to compile.with_all_deps }
+
+        it { is_expected.to contain_class('repo_ubelix') }
+        it { is_expected.to contain_yumrepo('ubelix').without_baseurl }
+      end
     end
   end
 end
