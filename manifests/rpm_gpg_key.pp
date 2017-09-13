@@ -1,23 +1,13 @@
-# == Define repo_ubelix::rpm_gpg_key
+# repo_ubelix::blah
 #
-# This define imports a given RPM gpg key if it is not
-# already imported in the rpm keyring.
+# A description of what this class does
 #
-# Reqiures:
-#   A file resources with the given path must exist before as it
-#   is required in the define.
+# @summary A short summary of the purpose of this class
 #
-# == Parameters
-#
-# [*path*]
-#   Path of the RPM GPG key to import
-#
-# === Examples
-#
+# @example
 #  repo_ubelix::rpm_gpg_key { 'UBELIX-6':
 #    path => "/etc/pki/rpm-gpg/RPM-GPG-KEY-UBELIX-6"
 #  }
-#
 define repo_ubelix::rpm_gpg_key($path) {
   # Given the path to a key, see if it is imported, if not, import it
   exec {  "import-${name}":
@@ -28,4 +18,3 @@ define repo_ubelix::rpm_gpg_key($path) {
     logoutput => 'on_failure',
   }
 }
-
