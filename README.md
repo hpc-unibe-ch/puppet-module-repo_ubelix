@@ -1,13 +1,13 @@
 
-# blupp
+# repo_ubelix
 
 #### Table of Contents
 
 1. [Description](#description)
-2. [Setup - The basics of getting started with blupp](#setup)
-    * [What blupp affects](#what-blupp-affects)
+2. [Setup - The basics of getting started with repo_ubelix](#setup)
+    * [What repo_ubelix affects](#what-repo_ubelix-affects)
     * [Setup requirements](#setup-requirements)
-    * [Beginning with blupp](#beginning-with-blupp)
+    * [Beginning with repo_ubelix](#beginning-with-repo_ubelix)
 3. [Usage - Configuration options and additional functionality](#usage)
 4. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
 5. [Limitations - OS compatibility, etc.](#limitations)
@@ -15,29 +15,11 @@
 
 ## Description
 
-Start with a one- or two-sentence summary of what the module does and/or what problem it solves. This is your 30-second elevator pitch for your module. Consider including OS/Puppet version it works with.       
-
-You can give more descriptive information in a second paragraph. This paragraph should answer the questions: "What does this module *do*?" and "Why would I use it?" If your module has a range of functionality (installation, configuration, management, etc.), this is the time to mention it.
+repo_ubelix manages the yum repository configuration for the UBELIX repository hosting packages specific to the UBELIX cluster.
 
 ## Setup
 
-### What blupp affects **OPTIONAL**
-
-If it's obvious what your module touches, you can skip this section. For example, folks can probably figure out that your mysql_instance module affects their MySQL instances.
-
-If there's more that they should know about, though, this is the place to mention:
-
-* Files, packages, services, or operations that the module will alter, impact, or execute.
-* Dependencies that your module automatically installs.
-* Warnings or other important notices.
-
-### Setup Requirements **OPTIONAL**
-
-If your module requires anything extra before setting up (pluginsync enabled, another module, etc.), mention it here. 
-  
-If your most recent release breaks compatibility or requires particular steps for upgrading, you might want to include an additional "Upgrading" section here.
-
-### Beginning with blupp  
+### Beginning with repo_ubelix  
 
 The very basic steps needed for a user to get the module up and running. This can include setup steps, if necessary, or it can be an example of the most basic use of the module.
 

@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## Release 1.0.0
+
+* Module now compatible to Puppet > 4.7.0
+
 ## Release 0.2.3
 
 * Renamed module from ubelixrepo to repo_ubelix to conform to recent design decisions.
