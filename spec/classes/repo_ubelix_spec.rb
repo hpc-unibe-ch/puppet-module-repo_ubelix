@@ -10,7 +10,7 @@ describe 'repo_ubelix' do
         it { is_expected.to compile.with_all_deps }
 
         it { is_expected.to contain_class('repo_ubelix') }
-        it { is_expected.to contain_yumrepo('ubelix').without_baseurl }
+        it { is_expected.to contain_yumrepo('ubelix') }
       end
     end
   end

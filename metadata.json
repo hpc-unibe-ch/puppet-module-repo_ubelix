@@ -1,6 +1,6 @@
 {
   "name": "ubelix-repo_ubelix",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Rolli, Michael (ID) <michael.rolli@id.unibe.ch>",
   "summary": "Repository setup for the UBELIX yum repository.",
   "license": "Apache-2.0",
@@ -36,7 +36,7 @@
       "version_requirement": ">= 4.7.0 < 6.0.0"
     }
   ],
-  "pdk-version": "1.0.1",
+  "pdk-version": "1.1.0",
   "template-url": "file:///opt/puppetlabs/pdk/share/cache/pdk-module-template.git",
-  "template-ref": "heads/master-0-g5db7961"
+  "template-ref": "heads/master-0-g54e88a4"
 }

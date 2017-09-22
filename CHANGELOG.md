@@ -2,9 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## Release 1.0.1
+
+* Updated devel files for PDK-1.1.0
+
 ## Release 1.0.0
 
-* Module now compatible to Puppet > 4.7.0
+* Module now compatible with Puppet > 4.7.0
 
 ## Release 0.2.3
 
