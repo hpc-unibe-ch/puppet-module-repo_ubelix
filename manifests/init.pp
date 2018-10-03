@@ -7,8 +7,10 @@
 # @example
 #   include repo_ubelix
 class repo_ubelix (
-  String $baseurl,
   Enum['present', 'absent'] $ensure,
+  String $baseurl,
+  String $mirrorlist,
+  Enum['roundrobin', 'priority'] $failovermethod,
   Integer $enabled,
   Integer $gpgcheck,
 ) {
@@ -18,10 +20,15 @@ class repo_ubelix (
 
   if $facts['os']['family'] == 'RedHat' and $facts['os']['name'] !~ /Fedora|Amazon/ {
     yumrepo { 'ubelix':
+      # lint:ignore:selector_inside_resource
       ensure         => $ensure,
-      mirrorlist     => 'absent',
+      mirrorlist     => $baseurl ? {
+        'absent' => $mirrorlist,
+        default  => 'absent',
+      },
+      # lint:endignore
       baseurl        => $baseurl,
-      failovermethod => 'absent',
+      failovermethod => $failovermethod,
       proxy          => 'absent',
       enabled        => $enabled,
       gpgcheck       => $gpgcheck,
