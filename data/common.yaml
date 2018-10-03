@@ -1,5 +1,7 @@
 ---
-repo_ubelix::ensure: 'present'
-repo_ubelix::enabled: 1
-repo_ubelix::baseurl: "http://mirror/mrepo/centos%{facts.os.release.major}-$basearch/RPMS.ubelix"
-repo_ubelix::gpgcheck: 1
+repo_ubelix::ensure:         'present'
+repo_ubelix::baseurl:        'absent'
+repo_ubelix::mirrorlist:     'http://mirror.ubelix.unibe.ch/local-ubelix'
+repo_ubelix::failovermethod: 'priority'
+repo_ubelix::enabled:        1
+repo_ubelix::gpgcheck:       1

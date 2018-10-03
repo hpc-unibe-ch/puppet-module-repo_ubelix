@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## Release 2.0.0
+
+BC BREAK: Class signature has remarkably changed!
+
+* Support mirrorlist attribute
+* Support Puppet 6
+
 ## Release 1.0.1
 
 * Updated devel files for PDK-1.1.0
