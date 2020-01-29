@@ -4,9 +4,8 @@
   "author": "Rolli, Michael (ID) <michael.rolli@id.unibe.ch>",
   "summary": "Repository setup for the UBELIX yum repository.",
   "license": "Apache-2.0",
-  "source": "https://idos-code.unibe.ch/projects/UBELIX/repos/ubelix-repo_ubelix/browse",
-  "project_page": "https://idos-code.unibe.ch/projects/UBELIX/repos/ubelix-repo_ubelix/browse",
-  "issues_url": "https://idos-issues.unibe.ch/projects/UXPM",
+  "source": "https://github.com/hpc-unibe-ch/puppet-module-repo_ubelix",
+  "issues_url": "https://github.com/hpc-unibe-ch/puppet-module-repo_ubelix/issues",
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
