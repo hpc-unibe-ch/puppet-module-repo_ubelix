@@ -1,7 +1,7 @@
 {
   "name": "ubelix-repo_ubelix",
   "version": "2.0.0",
-  "author": "Rolli, Michael (ID) <michael.rolli@id.unibe.ch>",
+  "author": "hpcunibech",
   "summary": "Repository setup for the UBELIX yum repository.",
   "license": "Apache-2.0",
   "source": "https://github.com/hpc-unibe-ch/puppet-module-repo_ubelix",
@@ -9,7 +9,11 @@
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
-      "version_requirement": ">= 4.13.1 < 6.0.0"
+      "version_requirement": ">= 4.13.1 <8.0.0"
+    },
+    {
+      "name": "puppetlabs/yumrepo_core",
+      "version_requirement": ">= 1.0.0 <2.0.0"
     }
   ],
   "data_provider": "hiera",
